@@ -1,6 +1,6 @@
 <html>
 <head>
-	<title>About</title>
+	<title>Contact</title>
 	<style>
 		a{
 			color: #f2a29f;
@@ -11,7 +11,7 @@
 			color: crimson;
 		}
 		.title{
-			color: #1b4b72;
+			color: #2d995b;
 			font-size: 84px;
 			margin-bottom: 5px;
 			margin-top: 15%;
@@ -26,14 +26,14 @@
 <body>
 <dev class="center">
 	<p class="title">
-		About
+		Contact
 	</p>
 </dev>
 <br/>
 <br/>
 <dev class="center">
 	<a href="http://blog.local/homepage">Homepage</a>
-	<a href="http://blog.local/contact">Contact</a>
+	<a href="http://blog.local/about">About</a>
 </dev>
 </body>
 </html>
