@@ -26,14 +26,14 @@
 <body>
 <dev class="center">
     <p class="title">
-        Homepage
+        Blog.Local
     </p>
 </dev>
 <br/>
 <br/>
 <dev class="center">
-    <a href="http://blog.local/about">About</a>
-    <a href="http://blog.local/contact">Contact</a>
+    <a href="http://blog.local/about">About Us</a>
+    <a href="http://blog.local/contact">Contact Us</a>
 </dev>
 </body>
 </html>
