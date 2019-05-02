@@ -27,6 +27,8 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
+Route::get('/user/show', 'UserController@show');
+
 Route::get('/welcome', function () {
     return view('welcome');
 });
