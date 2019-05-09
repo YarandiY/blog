@@ -33,4 +33,9 @@ Route::get('/welcome', function () {
     return view('welcome');
 });
 
+Route::post('/blog/add', 'BlogController@add');
+Route::get('/blog/add', function (){
+    return view('addBlog');
+});
+
 //Route::get('test/{id}','test',['name' => $id]);

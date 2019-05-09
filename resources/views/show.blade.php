@@ -5,9 +5,7 @@
     </title>
 
 </head>
-<body style="align-items: center;
-            display: flex;
-            justify-content: center;">
+<body >
 
 <table border="5" style="border-color: #761b18">
     <tr style="color: #4c110f">
@@ -33,7 +31,9 @@
             </td>
         </tr>
 @endforeach
+
 </table>
+
 
 
 
