@@ -3,24 +3,44 @@
     <title>
         Add
     </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .btn:hover{
+            color: lightgrey;
+            background-color: grey;
+        }
+        .btn{
+            background-color: lightgrey;
+            color: black;
+        }
 
+    </style>
 </head>
 <body>
-<span>
+<br>
+<br>
+<br>
+<div class="container ">
+    <h1>Add a new blog</h1>
+    <br>
+    <br>
 
-<h2>Add a new blog</h2>
+<form method="POST" action="{{url('blogs/add')}}">
+    <div class="form-group ">
+    <label for="title"> Title: </label><br>
+    <input class="form-control" id="title" type="text" name="title">
+    </div>
 
-<form method="POST" action="{{url('blog/add')}}">
-    Title:
-    <input type="text" name="title"><br><br><br>
-    body:
-    <textarea name="body"></textarea><br><br><br>
-    <input type="submit">
+    <div class="form-group">
+        <label for="body"> Body: </label><br>
+        <textarea id="body" class="form-control" name="body"></textarea>
+    </div>
+    <div class="btn-group">
+    <input class="btn" type="submit"><br> <a class="btn" href="/blogs">blogs</a>
+    </div>
     @csrf
 </form>
 
-</span>
-
-
+</div>
 </body>
 </html>

@@ -27,15 +27,21 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
-Route::get('/user/show', 'UserController@show');
+Route::get('/blogs', 'BlogController@show');
+
+
+
+//important!!
+Route::get('blog/{id}', 'BlogController@blogShow');
+
+//Route::get('test/{id}','test',['name' => $id]);
 
 Route::get('/welcome', function () {
     return view('welcome');
 });
 
-Route::post('/blog/add', 'BlogController@add');
-Route::get('/blog/add', function (){
+Route::post('/blogs/add', 'BlogController@add');
+Route::get('/blogs/add', function (){
     return view('addBlog');
 });
 
-//Route::get('test/{id}','test',['name' => $id]);

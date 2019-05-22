@@ -1,43 +1,48 @@
 <html>
 <head>
     <title>
-        Users
+        Blogs
     </title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .item{
+            color: dimgrey;
+        }
+        .item:hover{
+            color: lightcoral;
+            text-decoration: none;
+        }
+        .back{
+            font-size: 25px;
+            color: #6c757d;
+            padding-left: 5%;
+        }
+        .back:hover{
+            text-decoration: none;
+            color: lightcoral;
+        }
+    </style>
 
 </head>
-<body >
+<body style="padding-top: 5%" class="container">
+<div class=" row ">
+<div class="col-md-6">
+<h1>Blogs</h1>
 
-<table border="5" style="border-color: #761b18">
-    <tr style="color: #4c110f">
-        <td>number</td>
-        <td>name</td>
-        <td>last name </td>
-        <td>age </td>
-    </tr>
-    @foreach($x as $key => $user)
-        <tr>
-            <td>
-                {{$key + 1}}
-            </td>
-            <td>
-                {{$user['fName']}}
-            </td>
-            <td>
-                {{$user['lName']}}
-            </td>
-            <td>
-                {{$user['age']}}
+<br>
+<ul class="list-group-horizontal-md" >
+    @foreach($blogs as $blog)
 
-            </td>
-        </tr>
-@endforeach
+        <li class="list-group-item-action"><a class="item" href="/blog/{{$blog['id']}}"> {{$blog['title']}} </a></li>
 
-</table>
-
-
-
-
-
+    @endforeach
+</ul>
+    </div>
+    <div class="col-md-4">
+        <br>
+   <div ><a class="back container" href="/blogs/add">add new blog</a></div>
+    </div>
+</div>
 
 </body>
 </html>

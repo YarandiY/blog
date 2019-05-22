@@ -8,7 +8,7 @@ class UserController extends Controller
 {
     public function show(){
 
-        $users = [
+       /* $users = [
             ['fName' => 'Ali', 'lName' => 'Mohammadi', 'age' => 26],
             ['fName' => 'Taghi', 'lName' => 'Taghavi', 'age' => 36],
             ['fName' => 'Naghi', 'lName' => 'Naghavi', 'age' => 56],
@@ -18,7 +18,7 @@ class UserController extends Controller
 
         $data = ['x' => $users];
 
-       return view('show',$data);
+       return view('show',$data);*/
 
     }
 
