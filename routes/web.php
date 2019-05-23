@@ -41,6 +41,8 @@ Route::get('/welcome', function () {
 });
 
 Route::post('/blogs/add', 'BlogController@add');
+Route::post('/blogs/edit/{id}', 'BlogController@edit');
+Route::get('/blogs/edit/{id}', 'BlogController@editShow');
 Route::get('/blogs/add', function (){
     return view('addBlog');
 });

@@ -13,6 +13,13 @@
             text-decoration: none;
             color: black;
         }
+
+        .btn:hover{
+            color: lightcoral;
+        }
+        .btn{
+            color: black;
+        }
     </style>
 
 
@@ -26,7 +33,10 @@
 </div>
     <br>
     <br>
-    <a href="/blogs" >back</a>
+    <div class="btn-group">
+        <a class="btn" href="/blogs/edit/{{$blog->id}}" >edit</a>
+        <a class="btn" href="/blogs" >blogs</a>
+    </div>
 </div>
 
 </body>

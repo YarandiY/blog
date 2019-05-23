@@ -18,9 +18,10 @@ class BlogController extends Controller
 
         //save to DB
         $blog = new Blog;
+
         $blog -> title = $title;
         $blog -> body = $body;
-        $blog ->save();
+        $blog -> save();
 
         $data = ['blog' => $blog];
 
@@ -30,7 +31,7 @@ class BlogController extends Controller
 
     public function show(){
 
-        $blogs = Blog :: all();
+        $blogs = Blog::orderBy('id', 'desc')->get();
         $data = ['blogs' => $blogs];
         return view('show',$data);
     }
@@ -43,6 +44,32 @@ class BlogController extends Controller
 
         $data = ['blog' => $blog];
 
+        return view('blog',$data);
+    }
+
+    public function editShow($id){
+        $blog = Blog::where('id',$id)->first();
+
+//        echo $blog->body;
+
+        $data = ['blog' => $blog];
+
+        return view('edit',$data);
+    }
+
+    public function edit($id,Request $request){
+        $blog = Blog::where('id',$id)->first();
+
+        $title = $request -> input('title');
+        $body = $request -> input('body');
+
+
+        $blog -> title = $title;
+        $blog -> body = $body;
+
+        $blog -> update();
+
+        $data = ['blog' => $blog];
         return view('blog',$data);
     }
 }

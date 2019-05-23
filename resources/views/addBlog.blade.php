@@ -36,7 +36,7 @@
         <textarea id="body" class="form-control" name="body"></textarea>
     </div>
     <div class="btn-group">
-    <input class="btn" type="submit"><br> <a class="btn" href="/blogs">blogs</a>
+    <input class="btn" type="submit" value="save"><br> <a class="btn" href="/blogs">blogs</a>
     </div>
     @csrf
 </form>
